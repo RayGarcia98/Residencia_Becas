@@ -6,7 +6,7 @@
             <div class="flex">
                 <!-- Logo -->
                 <div class="flex-shrink-0 flex items-center">
-                <img  class="h-25 " height="100" width="195" src="/img/5.png">
+                <img  class="h-25 " height="100" width="195" src="/img/6.png">
                 </div>
 
                 <!-- Navigation Links -->
@@ -21,6 +21,8 @@
                         {{ __('Usuario') }}
                     </x-jet-nav-link>
                 </div>
+
+           
 
 
 

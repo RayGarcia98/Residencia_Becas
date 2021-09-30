@@ -2,19 +2,50 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\ProveedorInter;
+use App\Models\Reporte;
 use Illuminate\Http\Request;
 
-class DifucionController extends Controller
+class AdministracionController extends Controller
 {
     /**
      * Display a listing of the resource.
      *
      * @return \Illuminate\Http\Response
      */
+    public function __construct()
+    {
+        $this->middleware('auth');
+//        $this->middleware('isadmin',['only'=>'/user']);
+
+    }
+
+
+
     public function index()
     {
         //
+    }
 
+    public function admini()
+    {
+        //
+        return view('usuarios.administracion');
+    }
+    public function difu()
+    {
+        //
+        return view('usuarios.difucion');
+    }
+    public function financieros()
+    {
+        //
+        return view('usuarios.financieros');
+    }
+    public function jurid()
+    {
+        //
+        return view('usuarios.juridico');
     }
 
     /**
@@ -82,15 +113,26 @@ class DifucionController extends Controller
     {
         //
     }
-    public function Television(){
+
+    public function graficas(){
+//        $todaI=ProveedorInter::all();
+//        return $todaI;
+//
+//        return view('ADMINISTRATIVOS.Graficas',compact('todaI'));
+
+        $navegadores=ProveedorInter::with('PaquetesInternet')->get();
+//return $navegadores;
+
+        $puntos=[];
+        foreach($navegadores as $navegador){
+            $puntos[]=['name'=>$navegador['representante'],'y'=> floatval($navegador['id'])];
+        }
+        return view("ADMINISTRATIVOS.Graficas",["data"=> json_encode($puntos)]);
 
     }
 
-    public function Internet(){
-
-    }
-    public function Impresos(){
-
-    }
+//    public function datos(){
+//        $todaInformacion=Reporte::all();
+//    }
 
 }

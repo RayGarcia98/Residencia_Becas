@@ -32,14 +32,8 @@ switch (Auth::user()->area_id){
     case('ADMINISTRACION'):
         return redirect('/administracion');
         break;
-    case ('DIFUSION'):
-        return redirect('/difucion');
-        break;
-    case ('FINANCIEROS'):
-        return redirect('/financieros');
-        break;
-
-      //  switch (Auth::user()->area_id){
+  
+        //  switch (Auth::user()->area_id){
         //    case ('200'):
 //                return redirect('/dasboard');
           //      return $next ($request);

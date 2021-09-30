@@ -37,7 +37,6 @@ Route::delete('/usuario/{user}',[\App\Http\Controllers\UsuarioController::class,
 
 
 //Areas
-Route::get('/Administrador', [\App\Http\Controllers\Area1Controller::class,'index'])->name('Administrador');
-Route::get('/area2', [\App\Http\Controllers\Area2Controller::class,'index'])->name('area2');
-Route::get('/area3', [\App\Http\Controllers\Area3Controller::class,'index'])->name('area3');
+Route::get('/administracion', [\App\Http\Controllers\AdministracionController::class,'admini'])->name('ruta.admi');
+
 

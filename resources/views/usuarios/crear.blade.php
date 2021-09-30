@@ -1,36 +1,27 @@
 <x-app-layout>
     <x-slot name="header">
         <h2 class="font-semibold text-xl text-gray-800 leading-tight">
-            {{ __('') }}
+            {{ __('Bienvenid@ al registro de usuarios') }}
         </h2>
     </x-slot>
 
     <div class="py-12">
         <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
-            <div class="bg-white overflow-hidden shadow-xl sm:rounded-lg">
+            <div class="bg-blue overflow-hidden">
                 {{--                <x-jet-welcome />--}}
 
 
 
 
 
-
-                <button
-                    class="inline-block px-6 py-2 text-xs font-medium leading-6 text-center text-black uppercase transition bg-green-500 rounded-full shadow ripple hover:shadow-lg hover:bg-green-600 focus:outline-none"
-                >
-                    <a href="/dashboard">volver</a>
-                </button>
-
-
-
                 <div class="w-full flex justify-center my-0.5 py-6">
                     <div class="w-3/4">
-                        <div class="w-full flex flex-col md:flex-row rounded shadow-xl">
+                        <div class="w-full flex flex-col md:flex-row rounded overflow-hidden shadow-xl">
 
                             <div class="w-full md:w-1/4 h-auto">
-                                <div class="top flex items-center px-5 h-16 bg-gray-700 text-black">
+                                <div class="top flex items-center px-5 h-16 bg-gray-700 text-white">
                                     <div class="ml-3 flex flex-col text-xl">
-                                        ADMIN
+                                        
                                     </div>
                                 </div>
                                 <div class="bg-gray-400 w-full h-full sm:flex md:block">
@@ -81,7 +72,7 @@
 
                                                     <label class="block text-base text-black">
                                                         Email del usuario<br>
-                                                        <input title="text" name="email"
+                                                        <input title="text" name="email" placeholder="@gmail.com"
                                                                class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline">
                                                     </label>
 
@@ -103,7 +94,21 @@
                                                     {{--                                                   class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline">--}}
                                                     {{--                                        </label>--}}
 
-                                                   
+                                                    <div class="w-full ">
+                                                      
+                                                                <label for="area_id">Area</label>
+<select name="Área" id="area_id">
+  <option title="text"></option> 
+  <option value="ADMINISTRACION">ADMINISTRADOR</option>
+  <option value="DIFUSION">RECURSOS HUMANOS</option>
+  <option value="FINANCIEROS">RECURSOS MATERIALES</option>
+  <option value="">VINCULACION</option>
+  <option value="">ATENCION OPERATIVA</option>
+  <option value="">PADRON Y LIQUIDACION</option>
+  <option value="">COMUNICACION SOCIAL</option>
+  <option value="">SEDES DE ATENCION REGIONAL</option>
+  
+ </select>
 
                                                     </div>
                                                     <BR>
@@ -129,12 +134,19 @@
                                                     <button
 
 
-                                                        class="bg-green-400 hover:bg-gray-400 text-gray-800 font-bold py-2 px-4 rounded inline-flex items-center  ">
+                                                        class="hover:bg-gray-400 text-gray-800 font-bold py-2 px-4 rounded inline-flex items-center" style="background-color: rgb(191, 150, 99)">
 
 
                                                         <span>Guardar</span>
 
                                                     </button>
+
+                                                    <button
+                    class="hover:bg-gray-400 text-gray-800 font-bold py-2 px-4 rounded inline-flex items-center" style="background-color: rgb(191, 150, 99)"
+                > 
+                    <a href="/dashboard">Volver a inicio</a>
+                </button>
+
 
 
                                                 </form>
