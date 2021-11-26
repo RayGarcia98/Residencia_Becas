@@ -110,13 +110,13 @@
                 Destinatario
             </th>
             <th class="p-3 font-bold uppercase bg-green-800 text-white border border-gray-300 hidden lg:table-cell">
-                Dependencia/Departamento destinatario
+                Dependencia/Depto. destinatario
             </th>
             <th class="p-3 font-bold uppercase bg-green-800 text-white border border-gray-300 hidden lg:table-cell">
                 Remitente
             </th>
             <th class="p-3 font-bold uppercase bg-green-800 text-white border border-gray-300 hidden lg:table-cell">
-                Dependencia/Departameno remitente
+                Dependencia/Depto. remitente
             </th>
             <th class="p-3 font-bold uppercase bg-green-800 text-white border border-gray-300 hidden lg:table-cell">
                 Asunto

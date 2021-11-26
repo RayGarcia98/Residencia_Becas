@@ -49,6 +49,8 @@ Route::get('/seguimiento', [\App\Http\Controllers\SeguimientoController::class,'
 Route::get('/solicitudes', [\App\Http\Controllers\SolicitudesController::class,'index'])->name('solicitudes');
 
 //Formato de Solicitudes para usuarios
+Route::get('/Archivos', [\App\Http\Controllers\LinkarchivoController::class,'index'])->name('link');
+
 Route::get('/FormatoSolicitudes', [\App\Http\Controllers\FormatosolicitudesController::class,'index'])->name('formato');
 
 //Subir archivos para usuarios

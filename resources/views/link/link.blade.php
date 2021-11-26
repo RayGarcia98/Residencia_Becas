@@ -58,7 +58,7 @@
                 <br>
             </nav>
 
-              
+
     </x-slot>
             <div>
     <div class="py-12">
@@ -68,87 +68,73 @@
 
           
                 <div>
-</div>
+                </div></div>
 
 <div>
-            
-              
-
-            
-       
-
-
-
-    <div class="flex items-center max-w-md mx-auto bg-white rounded-full " x-data="{ search: '' }">
-    <h1 class="text-left">HISTORIAL DE SOLICITUDES SALIENTES</h1>
-        <div class="flex-auto">
-            <input type="search" class="w-full  text-gray-900 rounded-full focus:outline-none"
-                placeholder="Buscar por núm. de oficio" x-model="search">
-        </div>
-        <div>
-            <button type="submit" class="flex items-center justify-center w-12 h-12 text-gray-100 rounded-full"
-                :class="(search.length > 0) ? 'bg-green-900' : 'bg-gray-500 cursor-not-allowed'"
-                :disabled="search.length == 0">
-                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"
-                    xmlns="http://www.w3.org/2000/svg">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                        d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
-                </svg>
-            </button>
-        </div>
-    </div>
-
+<h1 class="text-2xl text-center mt-10">FORMATO DE SOLICITUDES</h1>
 </div>
-</form>
-</div>
-
-
-</div>
-
-
-
-
 <br>
-<table class="border-collapse w-full">
-<thead>
+                  
+<div>
 
-
-<tr>
-<th class="p-3 font-bold uppercase bg-green-900 text-white border border-gray-300 hidden lg:table-cell">
-Núm. Oficio
-</th>
-<th class="p-3 font-bold uppercase bg-green-800 text-white border border-gray-300 hidden lg:table-cell">
-Destinatario
-</th>
-<th class="p-3 font-bold uppercase bg-green-800 text-white border border-gray-300 hidden lg:table-cell">
-Dependencia/Depto. destinatario
-</th>
-<th class="p-3 font-bold uppercase bg-green-800 text-white border border-gray-300 hidden lg:table-cell">
-Remitente
-</th>
-<th class="p-3 font-bold uppercase bg-green-800 text-white border border-gray-300 hidden lg:table-cell">
-Dependencia/Depto. remitente
-</th>
-<th class="p-3 font-bold uppercase bg-green-800 text-white border border-gray-300 hidden lg:table-cell">
-Asunto
-</th>
-<th class="p-3 font-bold uppercase bg-green-800 text-white border border-gray-300 hidden lg:table-cell">
-Fecha de elaboración
-</th>
-<th class="p-3 font-bold uppercase bg-green-800 text-white border border-gray-300 hidden lg:table-cell">
-Archivo
-</th>
-<th class="p-3 font-bold uppercase  bg-green-800 text-white border border-gray-300 hidden lg:table-cell">
-Estatus
-</th>
-<th class="p-3 font-bold uppercase  bg-green-800 text-white border border-gray-300 hidden lg:table-cell">
-Observaciones
-</th>
-</tr>
-</thead>
-              
+<table class=" border-collapse table-auto w-1/2 max-w-sm w-full flex-row shadow-xl">
+     
+  <thead>
+    <tr>
+      <th>Formatos</th>
+      <th>Ver</th>
+      <th> </th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>
+      <label class="block text-base text-black">
+                                                        Hoja núm. 1<br> 
+      </td>
+      <td>
+      <button class="outline-none text-decoration: underline hover:underline mr-1 mb-1 px-3 py-1 bg-transprent text-xs font-bold text-blue-500 uppercase focus:outline-none">
+<a href="{{ route('formato') }}" :active="request()->routeIs('formato')">
+                        {{ __('Ver documento') }}
+</a> </button>
+      </td>
+      <td>
+      <button
+        class="inline-block px-6 py-2 text-xs font-medium leading-6 text-center text-white uppercase transition bg-green-500 rounded-full shadow ripple hover:shadow-lg hover:bg-green-600 focus:outline-none"
+    >
+        <a href="{{route('solicitudes')}}">Guardar</a>
+    </button>
+      </td>
+      <tr class="bg-green-200">
+      <td>   <label class="block text-base text-black">
+                                                        Hoja núm. 2<br> </td>
+      <td> <button class="outline-none text-decoration: underline hover:underline mr-1 mb-1 px-3 py-1 bg-transprent text-xs font-bold text-blue-500 uppercase focus:outline-none">
+<a href="{{ route('formato') }}" :active="request()->routeIs('formato')">
+                        {{ __('Ver documento') }}
+</a> </button></td>
+      <td> <button
+        class="inline-block px-6 py-2 text-xs font-medium leading-6 text-center text-white uppercase transition bg-green-500 rounded-full shadow ripple hover:shadow-lg hover:bg-green-600 focus:outline-none"
+    >
+        <a href="{{route('solicitudes')}}">Guardar</a>
+    </button></td>
+    </tr>
+    <tr>
+      <td> <label class="block text-base text-black">
+                                                        Hoja núm. 3<br></td>
+      <td> <button class="outline-none text-decoration: underline hover:underline mr-1 mb-1 px-3 py-1 bg-transprent text-xs font-bold text-blue-500 uppercase focus:outline-none">
+<a href="{{ route('formato') }}" :active="request()->routeIs('formato')">
+                        {{ __('Ver documento') }}
+</a> </button></td>
+      <td> <button
+        class="inline-block px-6 py-2 text-xs font-medium leading-6 text-center text-white uppercase transition bg-green-500 rounded-full shadow ripple hover:shadow-lg hover:bg-green-600 focus:outline-none"
+    >
+        <a href="{{route('solicitudes')}}">Guardar</a>
+    </button</td>
+    </tr>
+    
+    </tr>
+  </tbody>
+</table>
 </div>
-
-
 
 </x-app-layout>

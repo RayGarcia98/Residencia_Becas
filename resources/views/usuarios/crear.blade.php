@@ -131,22 +131,22 @@
 
 
                                                     <div class="w-full ">
-                                                      
-                                                                <label form="area_id">Área</label>
-<select name="descripcion" id="area_id">
-  <option title="">Seleccione un área</option> 
-  <option value="ADMINISTRACION">ADMINISTRADOR</option>
-  <option value="DIFUSION">RECURSOS HUMANOS</option>
-  <option value="FINANCIEROS">RECURSOS MATERIALES</option>
-  <option value="">VINCULACION</option>
-  <option value="">ATENCION OPERATIVA</option>
-  <option value="">PADRON Y LIQUIDACION</option>
-  <option value="">COMUNICACION SOCIAL</option>
-  <option value="">SEDES DE ATENCION REGIONAL</option>
-  
- </select>
-
-                                                    </div>
+<label form="area_id">Área</label>
+<select id="area_id" name="area_id">
+<option value selected="selected">Selecciona una opción</option>
+ <option value="ADMINISTRADOR">ADMINISTRADOR</option>
+ <option value="RECURSOS HUMANOS">RECURSOS HUMANOS</option>
+ <option value="RECURSOS MATERIALES">RECURSOS MATERIALES</option>
+ <option value="DIFUSION">DIFUSION</option>
+ <option value="FINANCIEROS">FINANCIEROS</option>
+ <option value="VINCULACION">VINCULACION</option>
+ <option value="ATENCION OPERATIVA">ATENCION OPERATIVA</option>
+ <option value="PADRON Y LIQUIDACION">PADRON Y LIQUIDACION</option>
+ <option value="COMUNICACION SOCIAL">COMUNICACION SOCIAL</option>
+ <option value="SEDES DE ATENCION REGIONAL">SEDES DE ATENCION REGIONAL</option>
+</select>
+</div>
+                                                    
                                                     <BR>
                                                     <label class="block text-base text-black">
                                                         Puesto<br>
@@ -219,7 +219,13 @@
                                                     EMAIL
                                                 </th>
                                                 <th class="p-3 font-bold uppercase bg-teal-700 text-gray-900 border border-gray-300 hidden lg:table-cell">
+                                                    PUESTO
+                                                </th>
+                                                <th class="p-3 font-bold uppercase bg-teal-700 text-gray-900 border border-gray-300 hidden lg:table-cell">
                                                     AREA DE TRABAJO
+                                                </th>
+                                                <th class="p-3 font-bold uppercase bg-teal-700 text-gray-900 border border-gray-300 hidden lg:table-cell">
+                                                    ACCIÓN
                                                 </th>
                                             {{--                                                <th class="p-3 font-bold uppercase bg-teal-700 text-white border border-gray-300 hidden lg:table-cell">--}}
                                             {{--                                                    ACCIONES--}}
@@ -232,29 +238,37 @@
 
 
                                                 <tr class="bg-white lg:hover:bg-gray-100 flex lg:table-row flex-row lg:flex-row flex-wrap lg:flex-no-wrap mb-10 lg:mb-0">
+                                                    
                                                     <td class="w-full lg:w-auto p-3 text-gray-800 text-center border border-b block lg:table-cell relative lg:static">
                                             <span
-                                                class="lg:hidden absolute top-0 left-0 bg-blue-200 px-2 py-1 text-xs font-bold uppercase">NOMBRE</span>
+                                                class="lg:hidden absolute top-0 left-0 bg-blue-200 px-2 py-1 text-xs font-bold uppercase">nombre</span>
 
                                                         {{$userss->name}}
+
+
                                                     </td>
                                                     <td class="w-full lg:w-auto p-3 text-gray-800 text-center border border-b text-center block lg:table-cell relative lg:static">
                                             <span
                                                 class="lg:hidden absolute top-0 left-0 bg-blue-200 px-2 py-1 text-xs font-bold uppercase">email</span><br/>
 
                                                         {{$userss->email}}
-                                                    </td>
-                                                    
-                                                    <td class="w-full lg:w-auto p-3 text-gray-800 text-center border border-b text-center block lg:table-cell relative lg:static">
 
+
+
+                                                    </td>
+                                                    <td class="w-full lg:w-auto p-3 text-gray-800 text-center border border-b text-center block lg:table-cell relative lg:static">
+                                            <span
+                                                class="lg:hidden absolute top-0 left-0 bg-blue-200 px-2 py-1 text-xs font-bold uppercase">puesto</span>
+                                                        {{$userss->puesto}}
+
+
+                                                    </td>
+                                                    <td class="w-full lg:w-auto p-3 text-gray-800 text-center border border-b text-center block lg:table-cell relative lg:static">
+                                            <span
+                                                class="lg:hidden absolute top-0 left-0 bg-blue-200 px-2 py-1 text-xs font-bold uppercase">area id</span>
                                                         {{$userss->area_id}}
-                                                    </td>
+                                                        
                                                     <td class="w-full lg:w-auto p-3 text-gray-800 text-center border border-b text-center block lg:table-cell relative lg:static">
-
-                                                        <span
-                                                class="lg:hidden absolute top-0 left-0 bg-blue-200 px-2 py-1 text-xs font-bold uppercase">id area</span>
-
-
 
                                                         {{--                                                        <button--}}
                                                         {{--                                                            class="inline-block px-6 py-2 text-xs font-medium leading-6 text-center text-white uppercase transition bg-green-500 rounded-full shadow ripple hover:shadow-lg hover:bg-green-600 focus:outline-none"--}}
@@ -341,56 +355,8 @@
                         document.getElementById('title-' + lastId).style.display = "none"
                         document.getElementById('button-' + lastId).classList.remove(...activeClasses)
                     }
-                    /*
-                        //If you want to use your own identifiers replace js code
-                        var views = ['view-1','view-2','view-3','view-4']
-                        var titles = ['title-1','title-2','title-3','title-4']
-                        var buttons = ['button-1','button-2','button-3','button-4']
-                        var activeClasses = ["bg-gray-500","border-l-4","pl-4","border-gray-700"];
-                        close()
-                        showView(1)
-                        function showView(buttonId) {
-                            "use strict";
-                            close()
-                            document.getElementById(views[buttonId-1]).style.display = "block"
-                            document.getElementById(titles[buttonId-1]).style.display = "block"
-                            document.getElementById(buttons[buttonId -1]).classList.add(...activeClasses)
-                        }
-                        function close() {
-                            "use strict";
-                            views.forEach(view => {
-                                document.getElementById(view).style.display = "none"
-                            });
-                            titles.forEach(title => {
-                                document.getElementById(title).style.display = "none"
-                            });
-                            buttons.forEach(button => {
-                                document.getElementById(button).classList.remove(...activeClasses)
-                            });
-                        }
-                    */
+               
                 </script>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
             </div>
         </div>
     </div>

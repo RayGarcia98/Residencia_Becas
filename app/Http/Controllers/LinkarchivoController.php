@@ -4,9 +4,9 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
-class FormatosolicitudesController extends Controller
+class LinkarchivoController extends Controller
 {
-/**
+    /**
      * Display a listing of the resource.
      *
      * @return \Illuminate\Http\Response
@@ -19,9 +19,9 @@ class FormatosolicitudesController extends Controller
 
     public function index()
     {
+        //
         
-
-        return view('formato.formato1');
+        return view('link.link');
         
         
     }
@@ -48,22 +48,6 @@ class FormatosolicitudesController extends Controller
     public function store(Request $request)
     {
        
-        Reporte::create([
-            'Asunto' => request('Asunto', 'Formato'),
-            'Fecha_elaboracion' => request('Fecha_elaboracion'),
-            'Destinatario' => request('Destinatario'),
-            'Depto_destinatario' => request('Depto_destinatario'),
-            'Cuerpo_texto' => request('Cuerpo_texto'),
-            'Remitente' => request('Remitente'),
-            'Depto_remitente' => request('Depto_remitente'),
-            
-
-
-        ]);
-
-        return redirect('')->with('success', 'enviado a finacieros correctamente!');
-
-
     }
 
 

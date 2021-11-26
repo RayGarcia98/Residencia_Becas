@@ -1,6 +1,6 @@
 <x-app-layout>
     <x-slot name="header">
-        <h2 class="font-semibold text-xl text-gray-800 leading-tight">
+        <h2 class="font-semibold text-xl text-white leading-tight">
             {{ __('CNBBBJ') }}
         </h2>
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -32,23 +32,23 @@
                          x-transition:leave="transition ease-in duration-75"
                          x-transition:leave-start="transform opacity-100 scale-100"
                          x-transition:leave-end="transform opacity-0 scale-95"
-                         class="absolute right-0 w-full md:max-w-screen-sm md:w-screen mt-2 origin-top-right">
+                         class="absolute max-w-md mx-auto">
                         <div class="px-2 pt-2 pb-4 bg-white rounded-md shadow-lg dark-mode:bg-gray-700">
                             <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
                                     </div>
-                                    <div class="ml-1">
+                                    <div class="ml-1 text-center">
                                     <x-jet-nav-link href="{{ route('solicitudes') }}" :active="request()->routeIs('solicitudes')">
                         {{ __('Solicitudes y trámites') }}
                     </x-jet-nav-link>
                            
                     </div>
-                                    <div class="ml-1">
-                                    <x-jet-nav-link href="{{ route('solicitudes') }}" :active="request()->routeIs('solicitudes')">
+                                    <div class="ml-1 text-center">
+                                    <x-jet-nav-link href="{{ route('link') }}" :active="request()->routeIs('link')">
                         {{ __('Formato de solicitudes') }}
                     </x-jet-nav-link>
                     </div>
-                                    <div class="ml-1">
-                                    <x-jet-nav-link href="{{ route('solicitudes') }}" :active="request()->routeIs('solicitudes')">
+                                    <div class="ml-1 text-center">
+                                    <x-jet-nav-link href="{{ route('archivo') }}" :active="request()->routeIs('archivo')">
                         {{ __('Subir archivos') }}
                     </x-jet-nav-link>
                                        

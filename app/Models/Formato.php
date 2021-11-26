@@ -11,15 +11,14 @@ class Formato extends Model
 
 
     protected $fillable=[
-      'nombre',
-        'folio',
-        'lugarFecha',
-        'nombreDestinatio',
-        'puestoDestinatario',
-        'cuerpoTexto',
-        'representante',
-        'cargo',
-        'RFC',
+      'Asunto',
+        'Fecha_elaboracion',
+        'Destinatario',
+        'Depto_destinatario',
+        'Cuerpo_texto',
+        'Remitente',
+        'Depto_remitente',
+        
 
 
 

@@ -58,97 +58,168 @@
                 <br>
             </nav>
 
+
               
     </x-slot>
             <div>
     <div class="py-12">
         <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
             <div class="bg-white overflow-hidden shadow-xl sm:rounded-lg">
-                {{--                <x-jet-welcome />--}}
+            <center>
+                    <img  class="h-25  "height="400" width="700"  src="/img/membretadavertical1.png">
+                </center>
+
 
           
                 <div>
 </div>
 
+
+                    
 <div>
-            
-              
 
-            
-       
+          
+                <button
+        class="inline-block px-6 py-2 text-xs font-medium leading-6 text-center text-white uppercase transition bg-green-500 rounded-full shadow ripple hover:shadow-lg hover:bg-green-600 focus:outline-none"
+    >
+        <a href="{{route('area1')}}">GUARDAR</a>
+    </button>
+
+{{--    {{date('d/m/Y')}}--}}
+
+    
+<style>
+    .sinborde {
+        border: 0;
+        text-align:end;
+    }
+
+        .alinea{
+           font-family: Verdana;
+            font-size:18px;
+            text-align: justify;
+        margin: 50px;
+
+
+        }
+</style>
+
+
+<div class="relative flex flex-col sm:flex-row sm:items-center bg-white shadow rounded-md py-5 pl-6 pr-8 sm:pr-6">
 
 
 
-    <div class="flex items-center max-w-md mx-auto bg-white rounded-full " x-data="{ search: '' }">
-    <h1 class="text-left">HISTORIAL DE SOLICITUDES SALIENTES</h1>
-        <div class="flex-auto">
-            <input type="search" class="w-full  text-gray-900 rounded-full focus:outline-none"
-                placeholder="Buscar por núm. de oficio" x-model="search">
+
+
+  
+        @csrf
+
+
+        <label class="block text-base text-red-900">
+            nombre reporte<br>
+            <input title="text" name="nombre"
+                   class="shadow appearance-none border rounded  py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline border-red-900 text-red-900" required autofocus>
+        </label>
+        <br>
+<br>
+
+
+        <div class="flex justify-end ...">
+            <label class="block text-base text-black">
+                <br>
+                <br>
+<br>
+
+                <input style="" title="text" name="folio"
+                       class="" value="Folio: DRT/{{date('d/m/Y')}}">
+
+            </label>
+            <br>
+            <br>
+<br>
+<br>
+<br>
+
         </div>
-        <div>
-            <button type="submit" class="flex items-center justify-center w-12 h-12 text-gray-100 rounded-full"
-                :class="(search.length > 0) ? 'bg-green-900' : 'bg-gray-500 cursor-not-allowed'"
-                :disabled="search.length == 0">
-                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"
-                    xmlns="http://www.w3.org/2000/svg">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                        d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
-                </svg>
-            </button>
+
+
+<div>
+        <div class="">
+            <label class="block text-base text-black">
+                <br>
+
+                <textarea class="w-full   h-10 flex justify-center text-right " name="lugarFecha" style="border: #cbd5e0 ">Oaxaca de Juárez, Oaxaca, a {{date('d')}} de {{date('M')}} del {{date('Y')}}</textarea>
+            </label>
+            <br>
         </div>
+
     </div>
 
+
+
+
+        <div class="">
+            <label class="block text-base text-black">
+                <br>
+
+                <input style="" title="text" name="nombreDestinatio"
+                       class="w-full   "
+                  >
+
+            </label>
+            <br>
+        </div>
+
+
+        <div class="">
+            <label class="block text-base text-black">
+                <br>
+
+                <input style="" title="text" name="puestoDestinatario"
+                       class="w-full overflow-ellipsis overflow-hidden  "
+                       value="  ________.
+                                ">
+
+            </label>
+            <br>
+        </div>
+
+        &nbsp;&nbsp;P R E S E N T E.
+
+
+
+
+
+        <div class=" text-justify">
+            <label class="block text-base text-black text-justify">
+                <br>
+
+{{--                <input style="" title="text" type="text" name="puestoDestinatario"--}}
+{{--                       class=" text-justify   "--}}
+{{--                       value="  Por medio del presente reciba un cordial saludo, al tiempo de solicitar su valioso apoyo para la elaboración--}}
+{{-- de contrato correspondiente a radio, pantallas, vallas y televisión de la campaña: “Color Semáforo” con la--}}
+{{--información que se adjunta">--}}
+                <textarea class="w-full   h-32" name="cuerpoTexto" style="border: #cbd5e0 ">L@ que suscribe C. ___________, del departamento de ____________.</textarea>
+
+            </label>
+            <br>
+        </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+               
 </div>
-</form>
-</div>
-
-
-</div>
-
-
-
-
-<br>
-<table class="border-collapse w-full">
-<thead>
-
-
-<tr>
-<th class="p-3 font-bold uppercase bg-green-900 text-white border border-gray-300 hidden lg:table-cell">
-Núm. Oficio
-</th>
-<th class="p-3 font-bold uppercase bg-green-800 text-white border border-gray-300 hidden lg:table-cell">
-Destinatario
-</th>
-<th class="p-3 font-bold uppercase bg-green-800 text-white border border-gray-300 hidden lg:table-cell">
-Dependencia/Depto. destinatario
-</th>
-<th class="p-3 font-bold uppercase bg-green-800 text-white border border-gray-300 hidden lg:table-cell">
-Remitente
-</th>
-<th class="p-3 font-bold uppercase bg-green-800 text-white border border-gray-300 hidden lg:table-cell">
-Dependencia/Depto. remitente
-</th>
-<th class="p-3 font-bold uppercase bg-green-800 text-white border border-gray-300 hidden lg:table-cell">
-Asunto
-</th>
-<th class="p-3 font-bold uppercase bg-green-800 text-white border border-gray-300 hidden lg:table-cell">
-Fecha de elaboración
-</th>
-<th class="p-3 font-bold uppercase bg-green-800 text-white border border-gray-300 hidden lg:table-cell">
-Archivo
-</th>
-<th class="p-3 font-bold uppercase  bg-green-800 text-white border border-gray-300 hidden lg:table-cell">
-Estatus
-</th>
-<th class="p-3 font-bold uppercase  bg-green-800 text-white border border-gray-300 hidden lg:table-cell">
-Observaciones
-</th>
-</tr>
-</thead>
-              
-</div>
-
-
-
 </x-app-layout>
